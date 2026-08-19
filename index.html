@@ -206,7 +206,7 @@ h3 {
 }.photo-placeholder img {
     width: 100%;
     height: 100%;
-object-fit: contain;    display: block;
+object-fit: cover;
 .photo-placeholder:nth-child(2),
 .photo-placeholder:nth-child(5),
 .photo-placeholder:nth-child(8),
@@ -222,7 +222,16 @@ object-fit: contain;    display: block;
 .photo-placeholder:nth-child(3),
 .photo-placeholder:nth-child(6) {
     aspect-ratio: 5 / 4;
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
+
+.photo-placeholder:nth-child(9) img {
+    object-fit: contain;
+}}
 .section-note {
     text-align: center;
     color: var(--muted);
