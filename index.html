@@ -200,8 +200,8 @@ h3 {
 }
     
 .photo-placeholder {
-    min-height: 0;
     aspect-ratio: 4 / 5;
+    overflow: hidden;
     background: linear-gradient(
         135deg,
         #d9c7b2,
@@ -214,12 +214,16 @@ h3 {
     text-align: center;
     color: #6f5947;
     font-style: italic;
-    padding: 15px;
-}.photo-placeholder img {
+    padding: 0;
+}
+
+.photo-placeholder img {
     width: 100%;
-    height: auto;
-object-fit: cover;
-    display: block; 
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .photo-placeholder:nth-child(2),
 .photo-placeholder:nth-child(5),
 .photo-placeholder:nth-child(8) {
@@ -230,14 +234,7 @@ object-fit: cover;
 .photo-placeholder:nth-child(6) {
     aspect-ratio: 5 / 4;
 }
-    
-.photo-placeholder img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-.section-note {
+    .section-note {
     text-align: center;
     color: var(--muted);
     font-style: italic;
