@@ -187,6 +187,7 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     margin-top: 35px;
+    align-items: start;
 }
 .photo-placeholder {
     aspect-ratio: 4 / 5;
@@ -203,38 +204,26 @@ h3 {
     color: #6f5947;
     font-style: italic;
     padding: 15px;
-}.photo-placeholder img {
+}
+.photo-placeholder img {
     width: 100%;
-    height: auto;
-object-fit: cover;
+    height: 100%;
+    object-fit: cover;
     display: block; 
+}
 .photo-placeholder:nth-child(2),
 .photo-placeholder:nth-child(5),
 .photo-placeholder:nth-child(8) {
     aspect-ratio: 16 / 9;
 }
-
-.photo-placeholder:nth-child(3),
 .photo-placeholder:nth-child(6) {
     aspect-ratio: 5 / 4;
-
-.photo-placeholder:nth-child(3),
-.photo-placeholder:nth-child(6) {
-    aspect-ratio: 5 / 4;
-.photo-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 .section-note {
     text-align: center;
     color: var(--muted);
     font-style: italic;
     margin-top: 25px;
-}
-    .photo-placeholder:nth-child(8) {
-        aspect-ratio: auto !important;
 }
 /* ---------- PLACES ---------- */
 .places-grid {
