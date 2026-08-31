@@ -202,9 +202,34 @@ h3 {
 }
 
 .hero-plane {
-    font-size: 25px;
+    width: 32px;
+    height: 22px;
     margin-top: 28px;
-    transform: rotate(-15deg);
+    position: relative;
+    transform: rotate(-12deg);
+}
+
+.hero-plane::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 32px solid #3b2118;
+    left: 0;
+    top: 1px;
+}
+
+.hero-plane span {
+    position: absolute;
+    width: 24px;
+    height: 1px;
+    background: var(--paper-light);
+    left: 3px;
+    top: 10px;
+    transform: rotate(27deg);
+    transform-origin: left center;
 }
     @media (max-width: 600px) {
 
@@ -238,10 +263,9 @@ h3 {
     }
 
     .hero-plane {
-        font-size: 20px;
-        margin-top: 16px;
-    }
-
+    width: 26px;
+    height: 18px;
+    margin-top: 16px;
 }
     /* ---------- PHOTO GALLERY ---------- */
 .photo-grid {
@@ -383,7 +407,9 @@ footer a {
         <div class="hero-date">October 2019</div>
         <div class="hero-divider">—</div>
         <div class="hero-coordinates">50.0755° N&nbsp;&nbsp;·&nbsp;&nbsp;14.4378° E</div>
-        <div class="hero-plane">✈︎</div>
+        <div class="hero-plane">
+    <span></span>
+</div>
     </div>
 
 </div>
