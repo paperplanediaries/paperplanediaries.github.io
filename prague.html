@@ -154,6 +154,57 @@ h3 {
     height: auto;
     display: block;
 }
+    .prague-hero {
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #3b2118;
+    pointer-events: none;
+}
+
+.entry-number {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.hero-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 9vw, 110px);
+    letter-spacing: 8px;
+    line-height: 1;
+}
+
+.hero-date {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    margin-top: 22px;
+}
+
+.hero-divider {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.hero-coordinates {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+.hero-plane {
+    font-size: 25px;
+    margin-top: 28px;
+    transform: rotate(-15deg);
+}
     /* ---------- PHOTO GALLERY ---------- */
 .photo-grid {
     display: grid;
