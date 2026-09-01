@@ -275,47 +275,125 @@ h3 {
     margin-top: 14px;
 }
     /* ---------- PHOTO GALLERY ---------- */
+/* ---------- PRAGUE INTRO ---------- */
+
+.prague-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 65px 25px 20px;
+    text-align: center;
+}
+
+.country-note {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    color: var(--muted);
+    margin: 0 0 30px;
+}
+
+.intro-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ---------- PHOTO DIARY ---------- */
+
+.photo-diary-heading {
+    text-align: center;
+    margin: 70px auto 40px;
+}
+
+.photo-diary-heading h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0 0 5px;
+}
+
+.photo-diary-heading p {
+    font-family: 'Caveat', cursive;
+    color: var(--muted);
+    font-size: 24px;
+    margin: 0;
+}
+
+/* ---------- POLAROID GALLERY ---------- */
+
 .photo-grid {
+    width: min(1000px, 90%);
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 35px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 35px 25px;
     align-items: start;
 }
-.photo-placeholder {
-    aspect-ratio: auto;
-    background: linear-gradient(
-        135deg,
-        #d9c7b2,
-        #eee4d7 50%,
-        #c9b39b
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #6f5947;
-    font-style: italic;
-    padding: 15px;
+
+.photo-card {
+    background: #fffdf8;
+    padding: 12px 12px 25px;
+    box-shadow: 0 4px 12px rgba(62, 47, 38, 0.12);
+    border: 1px solid #e4d9ca;
 }
-.photo-placeholder img {
+
+.photo-card:nth-child(1),
+.photo-card:nth-child(2) {
+    grid-column: span 3;
+}
+
+.photo-card:nth-child(n+3) {
+    grid-column: span 2;
+}
+
+.photo-card img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    display: block; 
+    display: block;
 }
-    
-.photo-placeholder:nth-child(3) {
-    aspect-ratio: 4 / 5;
+
+.photo-card p {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: #514239;
+    margin: 12px 5px 0;
+    line-height: 1.2;
 }
-    
-.section-note {
-    text-align: center;
-    color: var(--muted);
-    font-style: italic;
-    margin-top: 25px;
+
+/* little handmade imperfection */
+
+.photo-card:nth-child(1) {
+    transform: rotate(-1deg);
 }
-/* ---------- PLACES ---------- */
+
+.photo-card:nth-child(2) {
+    transform: rotate(1.2deg);
+}
+
+.photo-card:nth-child(3) {
+    transform: rotate(-1.5deg);
+}
+
+.photo-card:nth-child(4) {
+    transform: rotate(1deg);
+}
+
+.photo-card:nth-child(5) {
+    transform: rotate(-0.8deg);
+}
+
+.photo-card:nth-child(6) {
+    transform: rotate(1.3deg);
+}
+
+.photo-card:nth-child(7) {
+    transform: rotate(-1.2deg);
+}
+
+.photo-card:nth-child(8) {
+    transform: rotate(0.8deg);
+}
+        /* ---------- PLACES ---------- */
 .places-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -379,9 +457,49 @@ footer a {
         padding: 65px 18px;
     }
     .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-    }
+    width: 92%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 14px;
+}
+
+.photo-card:nth-child(1),
+.photo-card:nth-child(2),
+.photo-card:nth-child(n+3) {
+    grid-column: span 1;
+}
+
+.photo-card {
+    padding: 8px 8px 18px;
+}
+
+.photo-card p {
+    font-size: 18px;
+    margin-top: 9px;
+}
+
+.photo-diary-heading {
+    margin: 50px auto 30px;
+}
+
+.photo-diary-heading h2 {
+    font-size: 32px;
+}
+
+.photo-diary-heading p {
+    font-size: 21px;
+}
+
+.prague-intro {
+    padding: 45px 22px 10px;
+}
+
+.country-note {
+    font-size: 25px;
+}
+
+.intro-text {
+    font-size: 16px;
+}
     .hero {
         min-height: 85vh;
     }
@@ -466,35 +584,55 @@ footer a {
     </p>
    <div class="photo-grid">
 
-  <div class="photo-placeholder">
-<img src="images/prague/2-prague-old-town-square.PNG" alt="Prague Old Town Square">  </div>
+    <div class="photo-card">
+        <img src="images/prague/2-prague-old-town-square.PNG"
+             alt="Prague Old Town Square">
+        <p>Old Town Square — early morning</p>
+    </div>
 
-  <div class="photo-placeholder">
-    <img src="images/prague/3-prague-astronomical-clock.jpeg" alt="Prague Astronomical Clock">
-  </div>
+    <div class="photo-card">
+        <img src="images/prague/3-prague-astronomical-clock.jpeg"
+             alt="Prague Astronomical Clock">
+        <p>Astronomical Clock</p>
+    </div>
 
-  <div class="photo-placeholder">
-    <img src="images/prague/4-prague-cathedral-front.JPG" alt="Prague Cathedral">
-  </div>
+    <div class="photo-card">
+        <img src="images/prague/4-prague-cathedral-front.JPG"
+             alt="Prague Cathedral">
+        <p>St. Vitus Cathedral</p>
+    </div>
 
-  <div class="photo-placeholder">
-    <img src="images/prague/5-prague-old-town.JPG" alt="Prague Old Town">
-  </div>
+    <div class="photo-card">
+        <img src="images/prague/5-prague-old-town.JPG"
+             alt="Prague Old Town">
+        <p>Walking through history</p>
+    </div>
 
-  <div class="photo-placeholder">
-    <img src="images/prague/6-prague-architecture-detail-cathedral.JPG" alt="Prague Cathedral architectural detail">
-  </div>
+    <div class="photo-card">
+        <img src="images/prague/6-prague-architecture-detail-cathedral.JPG"
+             alt="Prague Cathedral architectural detail">
+        <p>Sunset light</p>
+    </div>
 
-  <div class="photo-placeholder">
-<img src="images/prague/7.%20prague-historic-gate.jpg" alt="Prague historic gate">  </div>
+    <div class="photo-card">
+        <img src="images/prague/7.%20prague-historic-gate.jpg"
+             alt="Prague historic gate">
+        <p>Path to the castle</p>
+    </div>
 
-  <div class="photo-placeholder">
-<img src="images/prague/8-prague-cobblestores-streets.JPG" alt="Prague cobblestone streets">  </div>
+    <div class="photo-card">
+        <img src="images/prague/8-prague-cobblestores-streets.JPG"
+             alt="Prague cobblestone streets">
+        <p>Streets of Prague</p>
+    </div>
 
-  <div class="photo-placeholder photo-vertical">
-      <img src="images/prague/9-prague-vintage-lamp.JPG" alt="Prague vintage lamp">
-  </div>    
+    <div class="photo-card">
+        <img src="images/prague/9-prague-vintage-lamp.JPG"
+             alt="Prague vintage lamp">
+        <p>Little details</p>
+    </div>
 
+</div>
 </div>
     <p class="section-note">
         More moments from Prague will be added soon. ✈️
