@@ -364,7 +364,46 @@ h3 {
     object-fit: cover;
     display: block;
 }
+/* ---------- PHOTO LIGHTBOX ---------- */
 
+.photo-card img {
+    cursor: zoom-in;
+}
+
+.photo-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: rgba(25, 20, 17, 0.88);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.photo-lightbox.active {
+    display: flex;
+}
+
+.photo-lightbox img {
+    max-width: 92vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.photo-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    cursor: pointer;
+    line-height: 1;
+}
 .photo-card p {
     font-family: 'Caveat', cursive;
     font-size: 22px;
