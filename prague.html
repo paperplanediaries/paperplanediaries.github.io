@@ -364,46 +364,7 @@ h3 {
     object-fit: cover;
     display: block;
 }
-/* ---------- PHOTO LIGHTBOX ---------- */
 
-.photo-card img {
-    cursor: zoom-in;
-}
-
-.photo-lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9998;
-    background: rgba(25, 20, 17, 0.88);
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-}
-
-.photo-lightbox.active {
-    display: flex;
-}
-
-.photo-lightbox img {
-    max-width: 92vw;
-    max-height: 92vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-}
-
-.photo-lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-family: Georgia, serif;
-    font-size: 36px;
-    cursor: pointer;
-    line-height: 1;
-}
 .photo-card p {
     font-family: 'Caveat', cursive;
     font-size: 22px;
@@ -625,102 +586,66 @@ footer a {
             made it the kind of place that asked you to slow down
             and simply take it all in.
         </p>
-    </div>
-   <!-- PHOTO DIARY -->
-
-<div class="photo-diary-heading">
-    <h2>The Photo Diary</h2>
-    <p>Moments collected in Prague.</p>
-</div>
-
-<div class="photo-grid">
-
+    </div>  
     <!-- PHOTO DIARY -->
-
-<div class="photo-diary-heading">
+   <div class="photo-diary-heading">
     <h2>The Photo Diary</h2>
     <p>Moments collected in Prague.</p>
-</div>
-
-<div class="photo-grid">
+</div>   <div class="photo-grid">
 
     <div class="photo-card">
-        <img
-            src="images/prague/2-prague-old-town-square.PNG"
-            alt="Prague Old Town Square"
-            onclick="openLightbox(this.src)"
-        >
+        <img src="images/prague/2-prague-old-town-square.PNG"
+             alt="Prague Old Town Square">
         <p>Old Town Square — early morning</p>
     </div>
 
     <div class="photo-card">
-        <img
-            src="images/prague/3-prague-astronomical-clock.jpeg"
-            alt="Prague Astronomical Clock"
-            onclick="openLightbox(this.src)"
-        >
+        <img src="images/prague/3-prague-astronomical-clock.jpeg"
+             alt="Prague Astronomical Clock">
         <p>Astronomical Clock</p>
     </div>
 
     <div class="photo-card">
-        <img
-            src="images/prague/4-prague-cathedral-front.JPG"
-            alt="Prague Cathedral"
-            onclick="openLightbox(this.src)"
-        >
+        <img src="images/prague/4-prague-cathedral-front.JPG"
+             alt="Prague Cathedral">
         <p>St. Vitus Cathedral</p>
     </div>
 
     <div class="photo-card">
-        <img
-            src="images/prague/5-prague-old-town.JPG"
-            alt="Prague Old Town"
-            onclick="openLightbox(this.src)"
-        >
+        <img src="images/prague/5-prague-old-town.JPG"
+             alt="Prague Old Town">
         <p>Walking through history</p>
     </div>
 
     <div class="photo-card">
-        <img
-            src="images/prague/7.%20prague-historic-gate.jpg"
-            alt="Prague historic gate"
-            onclick="openLightbox(this.src)"
-        >
-        <p>Path to the castle</p>
-    </div>
-
-    <div class="photo-card">
-        <img
-            src="images/prague/6-prague-architecture-detail-cathedral.JPG"
-            alt="Prague Cathedral architectural detail"
-            onclick="openLightbox(this.src)"
-        >
+        <img src="images/prague/6-prague-architecture-detail-cathedral.JPG"
+             alt="Prague Cathedral architectural detail">
         <p>Sunset light</p>
     </div>
 
     <div class="photo-card">
-        <img
-            src="images/prague/8-prague-cobblestores-streets.JPG"
-            alt="Prague cobblestone streets"
-            onclick="openLightbox(this.src)"
-        >
+        <img src="images/prague/7.%20prague-historic-gate.jpg"
+             alt="Prague historic gate">
+        <p>Path to the castle</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="images/prague/8-prague-cobblestores-streets.JPG"
+             alt="Prague cobblestone streets">
         <p>Streets of Prague</p>
     </div>
 
     <div class="photo-card">
-        <img
-            src="images/prague/9-prague-vintage-lamp.JPG"
-            alt="Prague vintage lamp"
-            onclick="openLightbox(this.src)"
-        >
+        <img src="images/prague/9-prague-vintage-lamp.JPG"
+             alt="Prague vintage lamp">
         <p>Little details</p>
     </div>
 
 </div>
-
-<p class="section-note">
-    More moments from Prague will be added soon. ✈️
-</p>
+</div>
+    <p class="section-note">
+        More moments from Prague will be added soon. ✈️
+    </p>
     <!-- PLACES -->
     <div style="margin-top:80px;">
         <h2>Places</h2>
@@ -832,22 +757,5 @@ footer a {
         <a href="#contact">Contact</a>
     </p>
 </footer>
-    <!-- PHOTO LIGHTBOX -->
-
-<div id="photoLightbox" class="photo-lightbox" onclick="closeLightbox()">
-    <span class="photo-lightbox-close">&times;</span>
-    <img id="lightboxImage" src="" alt="">
-</div>
-
-<script>
-function openLightbox(src) {
-    document.getElementById("lightboxImage").src = src;
-    document.getElementById("photoLightbox").classList.add("active");
-}
-
-function closeLightbox() {
-    document.getElementById("photoLightbox").classList.remove("active");
-}
-</script>
 </body>
 </html>
