@@ -26,20 +26,13 @@
     background-position: center;
     background-repeat: repeat;
 }
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 14px;
-    border: 1px solid rgba(105, 78, 48, 0.35);
-    pointer-events: none;
-    z-index: 9999;
-}
+body {
+    margin: 0;
+    background: var(--paper);
     color: var(--ink);
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.7;
-}
-/* ---------- NAVIGATION ---------- */
+}/* ---------- NAVIGATION ---------- */
 nav {
     position: sticky;
     top: 0;
