@@ -4,6 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paper Plane Diaries</title>
+    /* ---------- FLOATING DIARY ---------- */
+
+.floating-diary {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    width: 78px;
+    z-index: 1000;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.floating-diary img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.floating-diary:hover {
+    transform: translateY(-6px) rotate(-2deg);
+}
+
+@media (max-width: 700px) {
+    .floating-diary {
+        right: 16px;
+        bottom: 16px;
+        width: 62px;
+    }
+}
 <style>
 :root {
     --paper: #efe6d8;
